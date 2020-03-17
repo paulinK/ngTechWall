@@ -1,0 +1,21 @@
+<form #formulaire="ngForm" *ngIf="personne">
+  <label for="name">Name</label>
+  <input required [(ngModel)]="personne.name" class="form-control" type="text" id="name" name="name">
+
+  <label for="firstname">Firstname</label>
+  <input required [(ngModel)]="personne.firstname" class="form-control" type="text" id="firstname" name="firstname">
+
+  <label for="age">Age</label>
+  <input required min="0" max="170" [(ngModel)]="personne.age" class="form-control" type="number" id="age" name="age">
+
+  <label for="cin">Cin</label>
+  <input required [(ngModel)]="personne.cin" class="form-control" type="number" id="cin" name="cin">
+
+  <label for="job">Job</label>
+  <input required [(ngModel)]="personne.job" class="form-control" type="text" id="job" name="job">
+
+  <label for="path">Path</label>
+  <input  [(ngModel)]="personne.path" class="form-control" type="text" id="path" name="path">
+  <br>
+  <button class="btn btn-primary" (click)="updatePersonne()">Update</button>
+</form>

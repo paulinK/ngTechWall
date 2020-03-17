@@ -1,0 +1,8 @@
+<li class="list-group-item" (click)="selectPersonne()" >
+  <img src="assets/images/{{personne.path | pipe}}"
+  alt="{{personne.firstname}}"
+  width="50px" height="50px">
+  <b>&nbsp;{{personne.name | titlecase}} {{personne.firstname | titlecase}}</b>
+
+  <!-- {{personne | json}} -->
+</li>

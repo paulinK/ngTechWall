@@ -1,0 +1,11 @@
+<div class="row" *ngIf="personnes.length > 0">
+  <span *ngFor="let personne of personnes">
+    <img src="assets/images/{{personne.path | pipe}}"
+      alt="{{personne.firstname}}"
+      width="150px" height="150px"
+      class="img-circle">
+      <b>&nbsp;{{personne.name | titlecase}} {{personne.firstname | titlecase}}</b>
+
+  </span>
+</div>
+<br>

@@ -1,0 +1,40 @@
+<ol class="list-group">
+  <li class="list-group-item" *ngFor="let team of teams; let ind=index">
+    {{ team }} - {{ind}} -
+  </li>
+</ol>
+
+<p
+  [ngClass]="{
+    'est': est,
+    'barca': barca,
+    'milan': milan
+  }">
+  class works!
+</p>
+
+<button class="btn btn-danger" (click)="changeTeam()">Esperance</button>
+
+<br>
+
+<span>
+  Tester la directive personnalisée highlight ! <i class="fa fa-smile-o"></i>
+</span>
+
+<div appHighlight> Je teste ma directive Highlight </div>
+
+<span>
+  Tester la directive personnalisée rainbow ! <i class="fa fa-smile-o"></i>
+</span>
+
+<input type="text" class="form-control" appRainbow>
+
+<br>
+
+<span>
+  Tester la directive structurelle `*ngIf="expression"` ! <i class="fa fa-smile-o"></i>
+</span>
+<br>
+<input type="text" class="form-control" *ngIf="show">
+
+<button class="btn btn-danger" (click)="show = ! show">Afficher/Enlever</button>

@@ -1,0 +1,24 @@
+<div class="alert alert-danger" *ngIf="errorMessage">
+  {{ errorMessage }}
+</div>
+<form #formulaire="ngForm">
+  <label for="name">Name</label>
+  <input required ngModel class="form-control" type="text" id="name" name="name">
+
+  <label for="firstname">Firstname</label>
+  <input required ngModel class="form-control" type="text" id="firstname" name="firstname">
+
+  <label for="age">Age</label>
+  <input required min="0" max="170" ngModel class="form-control" type="number" id="age" name="age">
+
+  <label for="cin">Cin</label>
+  <input required ngModel class="form-control" type="number" id="cin" name="cin">
+
+  <label for="job">Job</label>
+  <input required ngModel class="form-control" type="text" id="job" name="job">
+
+  <label for="path">Path</label>
+  <input  ngModel class="form-control" type="text" id="path" name="path">
+  <br>
+  <button class="btn btn-primary" (click)="addPersonne(formulaire)">Valider</button>
+</form>
